@@ -14,7 +14,7 @@ public class Queens {
 			System.out.println("Total Solutions: " + a);
 		}
 	}
-	public static int explore(Board b, int row, int total){
+	private static int explore(Board b, int row, int total){
 		if(row == b.size()+1){
 			b.print();
 			System.out.println();
