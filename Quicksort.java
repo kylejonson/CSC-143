@@ -12,11 +12,11 @@ public class Quicksort  {
 	// THE PROGRAM CURRENTLY SORTS STRINGS HOWEVER YOU ARE ABLE TO
 	// CHANGE THE TYPES OF THESE CONSTANTS TO THE TYPE BEING SORTED
 	// AS WELL AS THE PARAMETER TYPE OF quickSort() sorry for caps
-	private String[] array;
-	private String pivot;
-	private String temp;
+	private static String[] array;
+	private static String pivot;
+	private static String temp;
 	
-	private int length;
+	private static int length;
 
 	public static void main(String[] args){
 		//I would like to apologize in advance for all of the ugly casting in the main
@@ -46,16 +46,16 @@ public class Quicksort  {
 		}
 	}
     //Sorts an array of some object using the quicksort algorithm
-	public Object[] quickSort(String[] array) {
+	public static Object[] quickSort(String[] array) {
 		if (array == null || array.length == 0){					//Check if the array even has data to sort
 			return null;
 		}
-		this.array = array;
+		Quicksort.array = array;
 		length = array.length;
 		return sort(0, length - 1);
 	}
 	//
-	private Object[] sort(int low, int high) {
+	private static Object[] sort(int low, int high) {
 		int i = low;
 		int j = high;
 		pivot = array[low + (high-low)/2];							//The pivot is the value of comparison in the sort
